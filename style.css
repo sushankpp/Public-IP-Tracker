@@ -105,6 +105,7 @@ body {
 
 #map {
   position: relative;
+  height: 500px;
   /* z-index: -1; */
 }
 
