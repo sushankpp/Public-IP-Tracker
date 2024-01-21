@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+  --font-family: 'Rubik', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  height: 100vh;
+}
+
+.ip-tracker {
+  position: relative;
+  background: url(images/pattern-bg-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 45.27%;
+}
+
+.heading {
+  font-size: 30px;
+  color: #fff;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  font-weight: 700;
+  margin: 0.5em;
+}
+
+.ip-search {
+  width: 35em;
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  padding: 1em;
+  border: none;
+  font-family: var(--font-family);
+  color: var(--Very-Dark-Gray);
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.ip-search:focus-within {
+  outline: none;
+}
+
+.error {
+  font-size: 15px;
+  color: red;
+}
+
+.search-arrow {
+  cursor: pointer;
+  position: relative;
+  top: 1.2em;
+  height: 50px;
+  border-radius: 0 10px 10px 0;
+  left: -0.2em;
+  padding: 1em;
+  background-color: var(--Very-Dark-Gray);
+}
+
+.search-arrow:focus-within {
+  scale: 0.97;
+  transition: scale 0.3s ease;
+}
+
+.details-showcase {
+  position: absolute;
+  z-index: 100;
+  top: 11em;
+  box-shadow: 10px 10px 30px 10px rgba(0, 0, 0, 0.6);
+  display: flex;
+  background-color: #fff;
+  padding: 1em;
+  width: 55em;
+  height: 9em;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.ip-address,
+.location,
+.timezone,
+.isp-name {
+  padding: 1em 2em 0;
+  width: 25%;
+  border-right: 1px solid var(--Dark-Gray);
+}
+
+.isp-name {
+  border: none;
+}
+
+#map {
+  position: relative;
+  /* z-index: -1; */
+}
+
+.h2 {
+  font-size: 15px;
+  color: var(--Dark-Gray);
+  font-size: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ip-value,
+.address,
+.time,
+.isp {
+  padding: 1em 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--Very-Dark-Gray);
+}
+
+@media only screen and (max-width: 700px) {
+  .ip-tracker {
+    background: url(images/pattern-bg-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45.27%;
+  }
+
+  .heading {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 1em;
+  }
+
+  #map {
+    position: relative;
+    z-index: -1;
+    height: 500px !important;
+  }
+
+  .ip-search {
+    width: 15em;
+    font-size: 13px;
+  }
+
+  .details-showcase {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    height: 22em;
+  }
+
+  .ip-address,
+  .location,
+  .timezone,
+  .isp-name {
+    border-right: 0;
+    width: 100%;
+  }
+
+  .ip-value,
+  .address,
+  .time,
+  .isp {
+    padding: 1em 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--Very-Dark-Gray);
+  }
+}
